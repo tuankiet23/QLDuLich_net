@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dulichModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ChiTietDiaDiem">
+    <Key>
+      <PropertyRef Name="MaChiTietDD" />
+    </Key>
+    <Property Name="MaChiTietDD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Madiadiem" Type="nvarchar" MaxLength="50" />
+    <Property Name="Matour" Type="nvarchar" MaxLength="50" />
+    <Property Name="TenChiTietDD" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DatTour">
+    <Key>
+      <PropertyRef Name="MaDT" />
+    </Key>
+    <Property Name="MaDT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Matour" Type="nvarchar" MaxLength="50" />
+    <Property Name="TenKH" Type="nvarchar" MaxLength="50" />
+    <Property Name="DienThoai" Type="char" MaxLength="15" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="255" />
+    <Property Name="SoNguoiLon" Type="int" />
+    <Property Name="SoTreEm" Type="int" />
+    <Property Name="Mapt" Type="nvarchar" MaxLength="50" />
+    <Property Name="YeuCau" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaTinhtrangDatTour" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Diadiem">
+    <Key>
+      <PropertyRef Name="Madiadiem" />
+    </Key>
+    <Property Name="Madiadiem" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tendiadiem" Type="nvarchar" MaxLength="100" />
+    <Property Name="MoTaChiTiet" Type="nvarchar" MaxLength="500" />
+    <Property Name="Images" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="DichVu">
+    <Key>
+      <PropertyRef Name="MaDichVu" />
+    </Key>
+    <Property Name="MaDichVu" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenDichVu" Type="nvarchar" MaxLength="50" />
+    <Property Name="MoTaChiTiet" Type="nvarchar(max)" />
+    <Property Name="TinhTrang" Type="nvarchar" MaxLength="50" />
+    <Property Name="Thongtin" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="KhachSan">
+    <Key>
+      <PropertyRef Name="MaKhachSan" />
+    </Key>
+    <Property Name="MaKhachSan" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MaLoaiKhachSan" Type="nvarchar" MaxLength="50" />
+    <Property Name="TenKhachSan" Type="nvarchar" MaxLength="255" />
+    <Property Name="Diachi" Type="nvarchar" MaxLength="500" />
+    <Property Name="DonGia" Type="int" />
+    <Property Name="Images" Type="nvarchar" MaxLength="255" />
+    <Property Name="TinhTrang" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mota" Type="nvarchar" MaxLength="500" />
+    <Property Name="Thongtinchitiet" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LienHe">
+    <Key>
+      <PropertyRef Name="MaLH" />
+    </Key>
+    <Property Name="MaLH" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ChuDe" Type="nvarchar" MaxLength="100" />
+    <Property Name="TenKH" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoiDung" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="LoaiKhachSan">
+    <Key>
+      <PropertyRef Name="MaLoaiKhachSan" />
+    </Key>
+    <Property Name="MaLoaiKhachSan" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenLoaiKhachSan" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LoaiTour">
+    <Key>
+      <PropertyRef Name="MaLoaiTour" />
+    </Key>
+    <Property Name="MaLoaiTour" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenLoaiTour" Type="nvarchar" MaxLength="100" />
+    <Property Name="MaTinhTrangLoaiTour" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="MaNV" />
+    </Key>
+    <Property Name="MaNV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenNV" Type="nvarchar" MaxLength="50" />
+    <Property Name="QueQuan" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="date" />
+    <Property Name="ChucVu" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Phuongthucthanhtoan">
+    <Key>
+      <PropertyRef Name="Mapt" />
+    </Key>
+    <Property Name="Mapt" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tenpt" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Slide">
+    <Key>
+      <PropertyRef Name="MaAnh" />
+    </Key>
+    <Property Name="MaAnh" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Anh" Type="nvarchar" MaxLength="50" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="50" />
+    <Property Name="TrangThai" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TinhTrangDatTour">
+    <Key>
+      <PropertyRef Name="MaTinhTrangDatTour" />
+    </Key>
+    <Property Name="MaTinhTrangDatTour" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenTinhTrangDatTour" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TinhTrangLoaiTour">
+    <Key>
+      <PropertyRef Name="MaTinhTrangLoaiTour" />
+    </Key>
+    <Property Name="MaTinhTrangLoaiTour" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenTinhTrangLoaiTour" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TinhTrangTour">
+    <Key>
+      <PropertyRef Name="MaTinhTrangTour" />
+    </Key>
+    <Property Name="MaTinhTrangTour" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenTinhTrangTour" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tintuc">
+    <Key>
+      <PropertyRef Name="MaTT" />
+    </Key>
+    <Property Name="MaTT" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Loaitt" Type="nvarchar" MaxLength="100" />
+    <Property Name="Tieude" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mota" Type="nvarchar" MaxLength="50" />
+    <Property Name="Noidung" Type="nvarchar" MaxLength="50" />
+    <Property Name="Hinhanh" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ngaydang" Type="date" />
+  </EntityType>
+  <EntityType Name="Tour">
+    <Key>
+      <PropertyRef Name="Matour" />
+    </Key>
+    <Property Name="Matour" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MaLoaiTour" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tentour" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mota" Type="nvarchar(max)" />
+    <Property Name="Lichtrinh" Type="nvarchar(max)" />
+    <Property Name="Banggia" Type="int" />
+    <Property Name="Thongtinlienquan" Type="nvarchar(max)" />
+    <Property Name="Images" Type="nvarchar" MaxLength="255" />
+    <Property Name="MaTinhTrangTour" Type="nvarchar" MaxLength="50" />
+    <Property Name="Diadiemkhoihanh" Type="nvarchar" MaxLength="50" />
+    <Property Name="Thoiluong" Type="nvarchar" MaxLength="500" />
+    <Property Name="MaKhachSan" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaDichVu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Madiadiem" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phuongtien" Type="nvarchar" MaxLength="100" />
+    <Property Name="NgayDi" Type="date" />
+    <Property Name="Lienhe" Type="nvarchar" MaxLength="500" />
+    <Property Name="Ngaycapnhat" Type="date" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="Username" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Userpass" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_ChiTietDiaDiem_Diadiem1">
+    <End Role="Diadiem" Type="Self.Diadiem" Multiplicity="0..1" />
+    <End Role="ChiTietDiaDiem" Type="Self.ChiTietDiaDiem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diadiem">
+        <PropertyRef Name="Madiadiem" />
+      </Principal>
+      <Dependent Role="ChiTietDiaDiem">
+        <PropertyRef Name="Madiadiem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietDiaDiem_Tour1">
+    <End Role="Tour" Type="Self.Tour" Multiplicity="0..1" />
+    <End Role="ChiTietDiaDiem" Type="Self.ChiTietDiaDiem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour">
+        <PropertyRef Name="Matour" />
+      </Principal>
+      <Dependent Role="ChiTietDiaDiem">
+        <PropertyRef Name="Matour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DatTour_Phuongthucthanhtoan">
+    <End Role="Phuongthucthanhtoan" Type="Self.Phuongthucthanhtoan" Multiplicity="0..1" />
+    <End Role="DatTour" Type="Self.DatTour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phuongthucthanhtoan">
+        <PropertyRef Name="Mapt" />
+      </Principal>
+      <Dependent Role="DatTour">
+        <PropertyRef Name="Mapt" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DatTour_TinhTrangDatTour">
+    <End Role="TinhTrangDatTour" Type="Self.TinhTrangDatTour" Multiplicity="0..1" />
+    <End Role="DatTour" Type="Self.DatTour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TinhTrangDatTour">
+        <PropertyRef Name="MaTinhTrangDatTour" />
+      </Principal>
+      <Dependent Role="DatTour">
+        <PropertyRef Name="MaTinhtrangDatTour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DatTour_Tour">
+    <End Role="Tour" Type="Self.Tour" Multiplicity="0..1" />
+    <End Role="DatTour" Type="Self.DatTour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour">
+        <PropertyRef Name="Matour" />
+      </Principal>
+      <Dependent Role="DatTour">
+        <PropertyRef Name="Matour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KhachSan_LoaiKhachSan">
+    <End Role="LoaiKhachSan" Type="Self.LoaiKhachSan" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="KhachSan" Type="Self.KhachSan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiKhachSan">
+        <PropertyRef Name="MaLoaiKhachSan" />
+      </Principal>
+      <Dependent Role="KhachSan">
+        <PropertyRef Name="MaLoaiKhachSan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoaiTour_TinhTrangLoaiTour">
+    <End Role="TinhTrangLoaiTour" Type="Self.TinhTrangLoaiTour" Multiplicity="0..1" />
+    <End Role="LoaiTour" Type="Self.LoaiTour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TinhTrangLoaiTour">
+        <PropertyRef Name="MaTinhTrangLoaiTour" />
+      </Principal>
+      <Dependent Role="LoaiTour">
+        <PropertyRef Name="MaTinhTrangLoaiTour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tour_Diadiem">
+    <End Role="Diadiem" Type="Self.Diadiem" Multiplicity="0..1" />
+    <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diadiem">
+        <PropertyRef Name="Madiadiem" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="Madiadiem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tour_DichVu">
+    <End Role="DichVu" Type="Self.DichVu" Multiplicity="0..1" />
+    <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DichVu">
+        <PropertyRef Name="MaDichVu" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="MaDichVu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tour_KhachSan">
+    <End Role="KhachSan" Type="Self.KhachSan" Multiplicity="0..1" />
+    <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachSan">
+        <PropertyRef Name="MaKhachSan" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="MaKhachSan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tour_LoaiTour">
+    <End Role="LoaiTour" Type="Self.LoaiTour" Multiplicity="0..1" />
+    <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiTour">
+        <PropertyRef Name="MaLoaiTour" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="MaLoaiTour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tour_TinhTrangTour">
+    <End Role="TinhTrangTour" Type="Self.TinhTrangTour" Multiplicity="0..1" />
+    <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TinhTrangTour">
+        <PropertyRef Name="MaTinhTrangTour" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="MaTinhTrangTour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dulichModelStoreContainer">
+    <EntitySet Name="ChiTietDiaDiem" EntityType="Self.ChiTietDiaDiem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DatTour" EntityType="Self.DatTour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Diadiem" EntityType="Self.Diadiem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DichVu" EntityType="Self.DichVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KhachSan" EntityType="Self.KhachSan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LienHe" EntityType="Self.LienHe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiKhachSan" EntityType="Self.LoaiKhachSan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiTour" EntityType="Self.LoaiTour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Phuongthucthanhtoan" EntityType="Self.Phuongthucthanhtoan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Slide" EntityType="Self.Slide" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TinhTrangDatTour" EntityType="Self.TinhTrangDatTour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TinhTrangLoaiTour" EntityType="Self.TinhTrangLoaiTour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TinhTrangTour" EntityType="Self.TinhTrangTour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tintuc" EntityType="Self.Tintuc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tour" EntityType="Self.Tour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ChiTietDiaDiem_Diadiem1" Association="Self.FK_ChiTietDiaDiem_Diadiem1">
+      <End Role="Diadiem" EntitySet="Diadiem" />
+      <End Role="ChiTietDiaDiem" EntitySet="ChiTietDiaDiem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietDiaDiem_Tour1" Association="Self.FK_ChiTietDiaDiem_Tour1">
+      <End Role="Tour" EntitySet="Tour" />
+      <End Role="ChiTietDiaDiem" EntitySet="ChiTietDiaDiem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DatTour_Phuongthucthanhtoan" Association="Self.FK_DatTour_Phuongthucthanhtoan">
+      <End Role="Phuongthucthanhtoan" EntitySet="Phuongthucthanhtoan" />
+      <End Role="DatTour" EntitySet="DatTour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DatTour_TinhTrangDatTour" Association="Self.FK_DatTour_TinhTrangDatTour">
+      <End Role="TinhTrangDatTour" EntitySet="TinhTrangDatTour" />
+      <End Role="DatTour" EntitySet="DatTour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DatTour_Tour" Association="Self.FK_DatTour_Tour">
+      <End Role="Tour" EntitySet="Tour" />
+      <End Role="DatTour" EntitySet="DatTour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KhachSan_LoaiKhachSan" Association="Self.FK_KhachSan_LoaiKhachSan">
+      <End Role="LoaiKhachSan" EntitySet="LoaiKhachSan" />
+      <End Role="KhachSan" EntitySet="KhachSan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoaiTour_TinhTrangLoaiTour" Association="Self.FK_LoaiTour_TinhTrangLoaiTour">
+      <End Role="TinhTrangLoaiTour" EntitySet="TinhTrangLoaiTour" />
+      <End Role="LoaiTour" EntitySet="LoaiTour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tour_Diadiem" Association="Self.FK_Tour_Diadiem">
+      <End Role="Diadiem" EntitySet="Diadiem" />
+      <End Role="Tour" EntitySet="Tour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tour_DichVu" Association="Self.FK_Tour_DichVu">
+      <End Role="DichVu" EntitySet="DichVu" />
+      <End Role="Tour" EntitySet="Tour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tour_KhachSan" Association="Self.FK_Tour_KhachSan">
+      <End Role="KhachSan" EntitySet="KhachSan" />
+      <End Role="Tour" EntitySet="Tour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tour_LoaiTour" Association="Self.FK_Tour_LoaiTour">
+      <End Role="LoaiTour" EntitySet="LoaiTour" />
+      <End Role="Tour" EntitySet="Tour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tour_TinhTrangTour" Association="Self.FK_Tour_TinhTrangTour">
+      <End Role="TinhTrangTour" EntitySet="TinhTrangTour" />
+      <End Role="Tour" EntitySet="Tour" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dulichModelStoreContainer" CdmEntityContainer="dulichEntities">
+    <EntitySetMapping Name="ChiTietDiaDiem">
+      <EntityTypeMapping TypeName="dulichModel.ChiTietDiaDiem">
+        <MappingFragment StoreEntitySet="ChiTietDiaDiem">
+          <ScalarProperty Name="MaChiTietDD" ColumnName="MaChiTietDD" />
+          <ScalarProperty Name="Madiadiem" ColumnName="Madiadiem" />
+          <ScalarProperty Name="Matour" ColumnName="Matour" />
+          <ScalarProperty Name="TenChiTietDD" ColumnName="TenChiTietDD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatTour">
+      <EntityTypeMapping TypeName="dulichModel.DatTour">
+        <MappingFragment StoreEntitySet="DatTour">
+          <ScalarProperty Name="MaDT" ColumnName="MaDT" />
+          <ScalarProperty Name="Matour" ColumnName="Matour" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="DienThoai" ColumnName="DienThoai" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SoNguoiLon" ColumnName="SoNguoiLon" />
+          <ScalarProperty Name="SoTreEm" ColumnName="SoTreEm" />
+          <ScalarProperty Name="Mapt" ColumnName="Mapt" />
+          <ScalarProperty Name="YeuCau" ColumnName="YeuCau" />
+          <ScalarProperty Name="MaTinhtrangDatTour" ColumnName="MaTinhtrangDatTour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diadiem">
+      <EntityTypeMapping TypeName="dulichModel.Diadiem">
+        <MappingFragment StoreEntitySet="Diadiem">
+          <ScalarProperty Name="Madiadiem" ColumnName="Madiadiem" />
+          <ScalarProperty Name="Tendiadiem" ColumnName="Tendiadiem" />
+          <ScalarProperty Name="MoTaChiTiet" ColumnName="MoTaChiTiet" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DichVu">
+      <EntityTypeMapping TypeName="dulichModel.DichVu">
+        <MappingFragment StoreEntitySet="DichVu">
+          <ScalarProperty Name="MaDichVu" ColumnName="MaDichVu" />
+          <ScalarProperty Name="TenDichVu" ColumnName="TenDichVu" />
+          <ScalarProperty Name="MoTaChiTiet" ColumnName="MoTaChiTiet" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+          <ScalarProperty Name="Thongtin" ColumnName="Thongtin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhachSan">
+      <EntityTypeMapping TypeName="dulichModel.KhachSan">
+        <MappingFragment StoreEntitySet="KhachSan">
+          <ScalarProperty Name="MaKhachSan" ColumnName="MaKhachSan" />
+          <ScalarProperty Name="MaLoaiKhachSan" ColumnName="MaLoaiKhachSan" />
+          <ScalarProperty Name="TenKhachSan" ColumnName="TenKhachSan" />
+          <ScalarProperty Name="Diachi" ColumnName="Diachi" />
+          <ScalarProperty Name="DonGia" ColumnName="DonGia" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+          <ScalarProperty Name="Mota" ColumnName="Mota" />
+          <ScalarProperty Name="Thongtinchitiet" ColumnName="Thongtinchitiet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LienHe">
+      <EntityTypeMapping TypeName="dulichModel.LienHe">
+        <MappingFragment StoreEntitySet="LienHe">
+          <ScalarProperty Name="MaLH" ColumnName="MaLH" />
+          <ScalarProperty Name="ChuDe" ColumnName="ChuDe" />
+          <ScalarProperty Name="TenKH" ColumnName="TenKH" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NoiDung" ColumnName="NoiDung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiKhachSan">
+      <EntityTypeMapping TypeName="dulichModel.LoaiKhachSan">
+        <MappingFragment StoreEntitySet="LoaiKhachSan">
+          <ScalarProperty Name="MaLoaiKhachSan" ColumnName="MaLoaiKhachSan" />
+          <ScalarProperty Name="TenLoaiKhachSan" ColumnName="TenLoaiKhachSan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiTour">
+      <EntityTypeMapping TypeName="dulichModel.LoaiTour">
+        <MappingFragment StoreEntitySet="LoaiTour">
+          <ScalarProperty Name="MaLoaiTour" ColumnName="MaLoaiTour" />
+          <ScalarProperty Name="TenLoaiTour" ColumnName="TenLoaiTour" />
+          <ScalarProperty Name="MaTinhTrangLoaiTour" ColumnName="MaTinhTrangLoaiTour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhanVien">
+      <EntityTypeMapping TypeName="dulichModel.NhanVien">
+        <MappingFragment StoreEntitySet="NhanVien">
+          <ScalarProperty Name="MaNV" ColumnName="MaNV" />
+          <ScalarProperty Name="TenNV" ColumnName="TenNV" />
+          <ScalarProperty Name="QueQuan" ColumnName="QueQuan" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Phuongthucthanhtoan">
+      <EntityTypeMapping TypeName="dulichModel.Phuongthucthanhtoan">
+        <MappingFragment StoreEntitySet="Phuongthucthanhtoan">
+          <ScalarProperty Name="Mapt" ColumnName="Mapt" />
+          <ScalarProperty Name="Tenpt" ColumnName="Tenpt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Slide">
+      <EntityTypeMapping TypeName="dulichModel.Slide">
+        <MappingFragment StoreEntitySet="Slide">
+          <ScalarProperty Name="MaAnh" ColumnName="MaAnh" />
+          <ScalarProperty Name="Anh" ColumnName="Anh" />
+          <ScalarProperty Name="MoTa" ColumnName="MoTa" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TinhTrangDatTour">
+      <EntityTypeMapping TypeName="dulichModel.TinhTrangDatTour">
+        <MappingFragment StoreEntitySet="TinhTrangDatTour">
+          <ScalarProperty Name="MaTinhTrangDatTour" ColumnName="MaTinhTrangDatTour" />
+          <ScalarProperty Name="TenTinhTrangDatTour" ColumnName="TenTinhTrangDatTour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TinhTrangLoaiTour">
+      <EntityTypeMapping TypeName="dulichModel.TinhTrangLoaiTour">
+        <MappingFragment StoreEntitySet="TinhTrangLoaiTour">
+          <ScalarProperty Name="MaTinhTrangLoaiTour" ColumnName="MaTinhTrangLoaiTour" />
+          <ScalarProperty Name="TenTinhTrangLoaiTour" ColumnName="TenTinhTrangLoaiTour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TinhTrangTour">
+      <EntityTypeMapping TypeName="dulichModel.TinhTrangTour">
+        <MappingFragment StoreEntitySet="TinhTrangTour">
+          <ScalarProperty Name="MaTinhTrangTour" ColumnName="MaTinhTrangTour" />
+          <ScalarProperty Name="TenTinhTrangTour" ColumnName="TenTinhTrangTour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tintuc">
+      <EntityTypeMapping TypeName="dulichModel.Tintuc">
+        <MappingFragment StoreEntitySet="Tintuc">
+          <ScalarProperty Name="MaTT" ColumnName="MaTT" />
+          <ScalarProperty Name="Loaitt" ColumnName="Loaitt" />
+          <ScalarProperty Name="Tieude" ColumnName="Tieude" />
+          <ScalarProperty Name="Mota" ColumnName="Mota" />
+          <ScalarProperty Name="Noidung" ColumnName="Noidung" />
+          <ScalarProperty Name="Hinhanh" ColumnName="Hinhanh" />
+          <ScalarProperty Name="Ngaydang" ColumnName="Ngaydang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tour">
+      <EntityTypeMapping TypeName="dulichModel.Tour">
+        <MappingFragment StoreEntitySet="Tour">
+          <ScalarProperty Name="Matour" ColumnName="Matour" />
+          <ScalarProperty Name="MaLoaiTour" ColumnName="MaLoaiTour" />
+          <ScalarProperty Name="Tentour" ColumnName="Tentour" />
+          <ScalarProperty Name="Mota" ColumnName="Mota" />
+          <ScalarProperty Name="Lichtrinh" ColumnName="Lichtrinh" />
+          <ScalarProperty Name="Banggia" ColumnName="Banggia" />
+          <ScalarProperty Name="Thongtinlienquan" ColumnName="Thongtinlienquan" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="MaTinhTrangTour" ColumnName="MaTinhTrangTour" />
+          <ScalarProperty Name="Diadiemkhoihanh" ColumnName="Diadiemkhoihanh" />
+          <ScalarProperty Name="Thoiluong" ColumnName="Thoiluong" />
+          <ScalarProperty Name="MaKhachSan" ColumnName="MaKhachSan" />
+          <ScalarProperty Name="MaDichVu" ColumnName="MaDichVu" />
+          <ScalarProperty Name="Madiadiem" ColumnName="Madiadiem" />
+          <ScalarProperty Name="Phuongtien" ColumnName="Phuongtien" />
+          <ScalarProperty Name="NgayDi" ColumnName="NgayDi" />
+          <ScalarProperty Name="Lienhe" ColumnName="Lienhe" />
+          <ScalarProperty Name="Ngaycapnhat" ColumnName="Ngaycapnhat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="dulichModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Userpass" ColumnName="Userpass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
